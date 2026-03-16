@@ -35,6 +35,16 @@ Examples:
 
 So when you add or rename a token in `@theme` in **`src/index.css`**, those classes are available everywhere. No extra config.
 
+### Dark theme + switching
+
+This project includes a dark theme that **overrides the same tokens** under `:root[data-theme="dark"]` in `src/index.css`.
+
+To switch themes:
+
+- **In the UI**: use the **Theme** toggle pill at the top of the page (it persists in `localStorage` as `theme`).
+- **Manually**: set the attribute on `<html>` in DevTools:
+  - `document.documentElement.dataset.theme = "dark"` (or `"light"`)
+
 ### Quick reference for this project
 
 - **`src/index.css`** — Edit tokens here. Primitives at the top, then semantic, then component. Comments explain each block.
